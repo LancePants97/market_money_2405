@@ -61,7 +61,6 @@ RSpec.describe 'ShowMarketRequest', type: :request do
 
     #visit the wrong market id
     get "/api/v0/markets/6"
-    # binding.pry
 
     expect(response).to_not be_successful
     expect(response.status).to eq(404)
