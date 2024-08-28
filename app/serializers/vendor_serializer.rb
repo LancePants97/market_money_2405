@@ -1,7 +1,7 @@
-class MarketVendorSerializer
-  def self.all_market_vendors(vendors)
+class VendorSerializer
+  def self.show_vendor(vendor)
     {
-      data: vendors.map do |vendor|
+      data:
         {
           id: vendor.id.to_s,
           type: 'vendor',
@@ -24,7 +24,6 @@ class MarketVendorSerializer
             }
           }
         }
-      end
     }
   end
 end

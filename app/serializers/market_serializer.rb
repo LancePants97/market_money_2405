@@ -3,7 +3,7 @@ class MarketSerializer
     {
       data: markets.map do |market|
         {
-          id: market.id,
+          id: market.id.to_s,
           type: 'market',
           attributes: {
             name: market.name,
@@ -14,13 +14,13 @@ class MarketSerializer
             zip: market.zip,
             lat: market.lat,
             lon: market.lon,
-            vendor_count: market.vendors.count
+            vendor_count: market.vendors_count
           },
           relationships: {
             vendors: {
               data: market.vendors.map do |vendor|
                 {
-                  id: vendor.id,
+                  id: vendor.id.to_s,
                   name: vendor.name,
                   type: 'vendor'
                 }
@@ -36,7 +36,7 @@ class MarketSerializer
     {
       data:
         {
-          id: market.id,
+          id: market.id.to_s,
           type: 'market',
           attributes: {
             name: market.name,
@@ -53,7 +53,7 @@ class MarketSerializer
             vendors: {
               data: market.vendors.map do |vendor|
                 {
-                  id: vendor.id,
+                  id: vendor.id.to_s,
                   name: vendor.name,
                   type: 'vendor'
                 }
