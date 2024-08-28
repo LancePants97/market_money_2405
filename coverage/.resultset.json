@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/lancenelson/turing_work/3mod/projects/market_money/config/environment.rb": {
+      "/Users/tylernoble/mod3/market_money_2405/config/environment.rb": {
         "lines": [
           null,
           1,
@@ -10,7 +10,7 @@
           1
         ]
       },
-      "/Users/lancenelson/turing_work/3mod/projects/market_money/config/application.rb": {
+      "/Users/tylernoble/mod3/market_money_2405/config/application.rb": {
         "lines": [
           1,
           null,
@@ -58,7 +58,7 @@
           null
         ]
       },
-      "/Users/lancenelson/turing_work/3mod/projects/market_money/config/boot.rb": {
+      "/Users/tylernoble/mod3/market_money_2405/config/boot.rb": {
         "lines": [
           1,
           null,
@@ -66,7 +66,7 @@
           1
         ]
       },
-      "/Users/lancenelson/turing_work/3mod/projects/market_money/config/environments/test.rb": {
+      "/Users/tylernoble/mod3/market_money_2405/config/environments/test.rb": {
         "lines": [
           1,
           null,
@@ -134,7 +134,7 @@
           null
         ]
       },
-      "/Users/lancenelson/turing_work/3mod/projects/market_money/config/initializers/cors.rb": {
+      "/Users/tylernoble/mod3/market_money_2405/config/initializers/cors.rb": {
         "lines": [
           null,
           null,
@@ -154,7 +154,7 @@
           null
         ]
       },
-      "/Users/lancenelson/turing_work/3mod/projects/market_money/config/initializers/filter_parameter_logging.rb": {
+      "/Users/tylernoble/mod3/market_money_2405/config/initializers/filter_parameter_logging.rb": {
         "lines": [
           null,
           null,
@@ -166,7 +166,7 @@
           null
         ]
       },
-      "/Users/lancenelson/turing_work/3mod/projects/market_money/config/initializers/inflections.rb": {
+      "/Users/tylernoble/mod3/market_money_2405/config/initializers/inflections.rb": {
         "lines": [
           null,
           null,
@@ -186,7 +186,23 @@
           null
         ]
       },
-      "/Users/lancenelson/turing_work/3mod/projects/market_money/config/routes.rb": {
+      "/Users/tylernoble/mod3/market_money_2405/spec/factories/markets.rb": {
+        "lines": [
+          1,
+          1,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          null,
+          null
+        ]
+      },
+      "/Users/tylernoble/mod3/market_money_2405/config/routes.rb": {
         "lines": [
           1,
           null,
@@ -197,10 +213,15 @@
           null,
           null,
           null,
+          1,
+          1,
+          1,
+          null,
+          null,
           null
         ]
       },
-      "/Users/lancenelson/turing_work/3mod/projects/market_money/app/models/market.rb": {
+      "/Users/tylernoble/mod3/market_money_2405/app/models/market.rb": {
         "lines": [
           1,
           1,
@@ -208,14 +229,14 @@
           null
         ]
       },
-      "/Users/lancenelson/turing_work/3mod/projects/market_money/app/models/application_record.rb": {
+      "/Users/tylernoble/mod3/market_money_2405/app/models/application_record.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/Users/lancenelson/turing_work/3mod/projects/market_money/spec/models/market_vendor_spec.rb": {
+      "/Users/tylernoble/mod3/market_money_2405/spec/models/market_vendor_spec.rb": {
         "lines": [
           1,
           null,
@@ -227,7 +248,7 @@
           null
         ]
       },
-      "/Users/lancenelson/turing_work/3mod/projects/market_money/app/models/market_vendor.rb": {
+      "/Users/tylernoble/mod3/market_money_2405/app/models/market_vendor.rb": {
         "lines": [
           1,
           1,
@@ -235,7 +256,7 @@
           null
         ]
       },
-      "/Users/lancenelson/turing_work/3mod/projects/market_money/spec/models/vendor_spec.rb": {
+      "/Users/tylernoble/mod3/market_money_2405/spec/models/vendor_spec.rb": {
         "lines": [
           1,
           null,
@@ -247,15 +268,261 @@
           null
         ]
       },
-      "/Users/lancenelson/turing_work/3mod/projects/market_money/app/models/vendor.rb": {
+      "/Users/tylernoble/mod3/market_money_2405/app/models/vendor.rb": {
         "lines": [
           1,
           1,
           1,
+          null
+        ]
+      },
+      "/Users/tylernoble/mod3/market_money_2405/spec/requests/api/v0/all_markets_request_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          10,
+          10,
+          null,
+          10,
+          10,
+          null,
+          10,
+          10,
+          null,
+          10,
+          10,
+          null,
+          10,
+          10,
+          null,
+          10,
+          10,
+          null,
+          10,
+          10,
+          null,
+          10,
+          10,
+          null,
+          10,
+          10,
+          null,
+          10,
+          10,
+          null,
+          null,
+          10,
+          10,
+          null,
+          10,
+          10,
+          null,
+          10,
+          10,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/tylernoble/mod3/market_money_2405/spec/requests/api/v0/show_market_request_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/tylernoble/mod3/market_money_2405/app/controllers/api/v0/markets_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          2,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/tylernoble/mod3/market_money_2405/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/tylernoble/mod3/market_money_2405/app/serializers/market_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          10,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null
         ]
       }
     },
-    "timestamp": 1724857696
+    "timestamp": 1724829511
   }
 }
