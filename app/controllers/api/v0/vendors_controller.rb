@@ -15,7 +15,19 @@ class Api::V0::VendorsController < ApplicationController
   end
 
   def create
-    render json: Vendor.create(vendor_params)
+    vendor = Vendor.new(vendor_params)
+    if vendor.save
+        render json: vendor, status: 201
+    else
+      render json: {
+        errors: [
+          {
+            status: '400',
+            detail: "Couldn't create Vendor without all attributes"
+          }
+        ]
+    }, status: :bad_request
+    end
   end
 
   private
