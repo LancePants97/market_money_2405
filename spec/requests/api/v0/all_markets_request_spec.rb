@@ -14,7 +14,6 @@ RSpec.describe 'AllMarketsRequest', type: :request do
     expect(markets.count).to eq(10)
 
     markets.each do |market|
-
       expect(market).to have_key(:attributes)
       expect(market[:attributes]).to be_a(Hash)
 
@@ -54,7 +53,6 @@ RSpec.describe 'AllMarketsRequest', type: :request do
 
       expect(market[:relationships][:vendors]).to have_key(:data)
       expect(market[:relationships][:vendors][:data]).to be_an(Array)
-      
     end
   end
 end
