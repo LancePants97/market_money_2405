@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'All Vendors for a Market Request', type: :request do
-  it 'returns all markets JSON Serializer' do
+  it 'returns all vendors for a market JSON Serializer' do
     market1 = FactoryBot.create(:market)
     market2 = FactoryBot.create(:market)
 
@@ -59,7 +59,7 @@ RSpec.describe 'All Vendors for a Market Request', type: :request do
     expect(first_vendor[:attributes][:contact_phone]).to eq(vendor1.contact_phone)
     expect(first_vendor[:attributes][:credit_accepted]).to eq(vendor1.credit_accepted)
 
-    expect(first_vendor[:relationships][:markets][:data][0][:id]).to eq market1.id
+    expect(first_vendor[:relationships][:markets][:data][0][:id]).to eq market1.id.to_s
     expect(first_vendor[:relationships][:markets][:data][0][:name]).to eq market1.name
     expect(first_vendor[:relationships][:markets][:data][0][:type]).to eq "market"
   end
