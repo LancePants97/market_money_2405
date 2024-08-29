@@ -30,6 +30,22 @@ class Api::V0::VendorsController < ApplicationController
     end
   end
 
+  def update
+    vendor = Vendor.find(params[:id])
+    if vendor.update(vendor_params)
+      render json: vendor, status: 200
+    else
+      render json: {
+        errors: [
+          {
+            status: '400',
+            detail: "Couldn't update Vendor with empty attribute"
+          }
+        ]
+    }, status: :bad_request
+    end
+  end
+
   private
   def vendor_params
     params.require(:vendor).permit(:name, 
