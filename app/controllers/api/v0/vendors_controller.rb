@@ -39,7 +39,7 @@ class Api::V0::VendorsController < ApplicationController
         errors: [
           {
             status: '400',
-            detail: "Couldn't update Vendor"
+            detail: "Couldn't update Vendor with empty attribute"
           }
         ]
     }, status: :bad_request
