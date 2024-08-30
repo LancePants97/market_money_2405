@@ -338,8 +338,8 @@
           1,
           null,
           3,
-          null,
           1,
+          0,
           null,
           null,
           null
@@ -350,32 +350,8 @@
           1,
           null
         ]
-      },
-      "/Users/lancenelson/turing_work/3mod/projects/market_money/app/serializers/atm_serializer.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
       }
     },
-    "timestamp": 1725036083
+    "timestamp": 1725040611
   }
 }

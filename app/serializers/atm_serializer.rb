@@ -2,7 +2,7 @@ class AtmSerializer
   def self.all_atms(atms)
     {
       data: atms.map do |atm|
-          id => nil
+        { id => nil
           type => "atm",
           attributes => {
             name: atm[1][1][1][:poi][:name],
@@ -15,6 +15,7 @@ class AtmSerializer
             lon: atm[1][1][1][:position][:lon]
           }
       end
+        }
     }
   end
 end
