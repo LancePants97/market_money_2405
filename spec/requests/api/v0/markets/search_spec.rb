@@ -17,7 +17,8 @@ RSpec.describe 'Markets Search', type: :request do
     headers = {"CONTENT_TYPE" => "application/json"}
     
     get "/api/v0/markets/search?name=Nob Hill Growers' Market", headers: headers
-    
+    expect(response.status).to eq(200)
+
     search_results = JSON.parse(response.body, symbolize_names: true)[:data]
     expect(search_results).to be_an(Array)
 
@@ -91,7 +92,8 @@ RSpec.describe 'Markets Search', type: :request do
     headers = {"CONTENT_TYPE" => "application/json"}
     
     get "/api/v0/markets/search?state=New Mexico", headers: headers
-    
+    expect(response.status).to eq(200)
+
     search_results = JSON.parse(response.body, symbolize_names: true)[:data]
 
     expect(search_results.first[:attributes][:name]).to eq(market1.name)
@@ -120,7 +122,8 @@ RSpec.describe 'Markets Search', type: :request do
     headers = {"CONTENT_TYPE" => "application/json"}
     
     get "/api/v0/markets/search?state=New Mexico&city=Albuquerque", headers: headers
-    
+    expect(response.status).to eq(200)
+
     search_results = JSON.parse(response.body, symbolize_names: true)[:data]
 
     expect(search_results.first[:attributes][:name]).to eq(market1.name)
@@ -149,7 +152,8 @@ RSpec.describe 'Markets Search', type: :request do
     headers = {"CONTENT_TYPE" => "application/json"}
     
     get "/api/v0/markets/search?state=New Mexico&city=Albuquerque&name=Nob Hill Growers' Market", headers: headers
-    
+    expect(response.status).to eq(200)
+
     search_results = JSON.parse(response.body, symbolize_names: true)[:data]
 
     expect(search_results.first[:attributes][:name]).to eq(market1.name)
@@ -178,7 +182,8 @@ RSpec.describe 'Markets Search', type: :request do
     headers = {"CONTENT_TYPE" => "application/json"}
     
     get "/api/v0/markets/search?state=New Mexico&name=Nob Hill Growers' Market", headers: headers
-    
+    expect(response.status).to eq(200)
+
     search_results = JSON.parse(response.body, symbolize_names: true)[:data]
 
     expect(search_results.first[:attributes][:name]).to eq(market1.name)
@@ -198,7 +203,8 @@ RSpec.describe 'Markets Search', type: :request do
     headers = {"CONTENT_TYPE" => "application/json"}
     
     get "/api/v0/markets/search?name=Gamestop", headers: headers
-    
+    expect(response.status).to eq(200)
+
     search_results = JSON.parse(response.body, symbolize_names: true)[:data]
     expect(search_results).to eq([])
   end

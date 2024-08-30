@@ -56,4 +56,24 @@ class Api::V0::MarketsController < ApplicationController
       }, status: 422
     end
   end
+
+  def nearest_atms
+    market = Market.find(params[:id])
+    lat = market.lat
+    lon = market.lon
+    key = Rails.application.credentials.tomtom[:key]
+    # binding.pry
+    conn = Faraday.new(url: "https://api.tomtom.com") do |faraday|
+      faraday.headers["key"] = key
+    end
+
+    response = conn.get("/search/2/nearbySearch/.json?key=#{key}&lat=#{lat}&lon=#{lon}")
+    # binding.pry
+    json = JSON.parse(response.body, symbolize_names: true)
+    
+    sorted_results = json.sort_by { |results| [:dist] }
+    # binding.pry
+    render json: AtmSerializer.all_atms(sorted_results[1])
+    # binding.pry
+  end
 end
