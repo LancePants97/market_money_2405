@@ -15,7 +15,8 @@ Rails.application.routes.draw do
         resources :vendors, only: [:index], controller: :market_vendors
       end
       resources :vendors, only: [:show, :create, :update, :destroy]
-      resources :market_vendors, only:[:create, :destroy]
+      resources :market_vendors, only:[:create]
+      delete 'market_vendors', to: 'market_vendors#destroy' #was unsure how to get this without the /:id
     end
   end
 
