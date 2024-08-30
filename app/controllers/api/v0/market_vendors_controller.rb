@@ -15,4 +15,16 @@ class Api::V0::MarketVendorsController < ApplicationController
       }, status: :not_found
     end
   end
+
+  def create
+    market_vendor = MarketVendorService.new(market_vendor_params)
+    result = market_vendor.add_vendor_to_market
+    render json: result[:json], status: result[:status]
+  end
+
+  private
+
+  def market_vendor_params
+    params.permit(:market_id, :vendor_id)
+  end
 end
