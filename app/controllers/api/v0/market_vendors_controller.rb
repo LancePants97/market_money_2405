@@ -22,6 +22,23 @@ class Api::V0::MarketVendorsController < ApplicationController
     render json: result[:json], status: result[:status]
   end
 
+  def destroy
+    market_vendor = MarketVendor.find_by(market_id: params[:market_id], vendor_id: params[:vendor_id])
+    if market_vendor
+      market_vendor.destroy
+      head :no_content
+    else
+      render json: {
+        errors: [
+          {
+            status: '404',
+            detail: 'MarketVendor association not found'
+          }
+        ]
+      }, status: :not_found
+    end
+  end
+
   private
 
   def market_vendor_params
