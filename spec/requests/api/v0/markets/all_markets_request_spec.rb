@@ -23,9 +23,6 @@ RSpec.describe 'AllMarketsRequest', type: :request do
       expect(market[:attributes]).to have_key(:street)
       expect(market[:attributes][:street]).to be_a(String)
 
-      expect(market[:attributes]).to have_key(:street)
-      expect(market[:attributes][:street]).to be_a(String)
-
       expect(market[:attributes]).to have_key(:city)
       expect(market[:attributes][:city]).to be_a(String)
 
